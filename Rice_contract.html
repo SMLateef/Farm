@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udant - Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for positioning the logo and navigation */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 65px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            font-family: 'Your Custom Font', sans-serif;
+            font-size: 20px;
+        }
+
+        /* CSS for the image and product details */
+        .image-details-container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .product-image {
+            max-width: 50%; /* Adjust the image size as needed */
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            font-size: 30px;
+        }
+
+        .product-description {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo in the Header -->
+        <div class="logo">
+            <a href="/" style="color: green;"><b><u>Udant</u></b></a>
+        </div>
+
+        <!-- Header Navigation -->
+        <nav>
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="/" style="color: green;">Home</a></li>
+                <li><a href="/about" style="color: green;">About us</a></li>
+                <li><a href="/products" style="color: green;">Products</a></li>
+                <li><a href="/cart" style="color: green;">Cart</a></li>
+                <li><a href="http://127.0.0.1:5500/Porfile.html" style="color: green;">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Product Page</h1>
+    <!-- Product Container -->
+    <div class="image-details-container">
+        <!-- Product Image -->
+        <img src="https://cdn.loveandlemons.com/wp-content/uploads/2020/03/how-to-cook-rice.jpg" alt="Product Image" class="product-image">
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <!-- Product Name -->
+            <p class="product-name">Product:-Rice</p>
+            <p class="product-price">50/- RS Per KG</p>
+            <!-- Product Description -->
+            <p class="product-description">
+<pre>
+Crop:Aroboric Rice
+
+Season : Kharif
+    
+Duration :150 Days
+</pre>
+            </p>
+        <pre>    <a href="http://127.0.0.1:5500/Cart.html"><button onclick="addToCart('Product 2', 20)">Request Here</button></a></pre>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for adding products to the cart
+        function addToCart(productName, price) {
+            // Create a cart item object
+            const item = {
+                name: productName,
+                price: price,
+            };
+    
+            // Check if the cart exists in local storage, and create it if it doesn't
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Add the item to the cart
+            cart.push(item);
+    
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+    </head>
+    <body>
+    <ul>
+        <li>
+            <span><h3>Product Price 45/-RS</h3></span>
+
+        </li>
+       
+        <!-- Add more products here -->
+    </ul>
+    
+    <a href="http://127.0.0.1:5500/Cart.html">View Cart</a>
+    </body>
+    </html>
+</body>
+</html>

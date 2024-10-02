@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udant - Online Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS for positioning the logo and navigation */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 65px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            font-family: 'Your Custom Font', sans-serif;
+            font-size: 20px;
+        }
+
+        /* CSS for the image and product details */
+        .image-details-container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .product-image {
+            max-width: 80%; /* Increase the image size as needed */
+            height: 600px;
+            margin-right: 20px;
+        }
+
+        .product-details {
+            font-size: 30px;
+        }
+
+        .product-description {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Logo in the Header -->
+        <div class="logo">
+            <a href="/" style="color: green;"><b><u>Udant</u></b></a>
+        </div>
+
+        <!-- Header Navigation -->
+        <nav>
+            <!-- Navigation Links -->
+            <ul>
+                <li><a href="/" style="color: green;">Home</a></li>
+                <li><a href="/about" style="color: green;">About us</a></li>
+                <li><a href="/products" style="color: green;">Products</a></li>
+                <li><a href="/cart" style="color: green;">Cart</a></li>
+                <li><a href="http://127.0.0.1:5500/Porfile.html" style="color: green;">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
+<br>
+<br>
+<h1>Product Page</h1>
+<br>
+    <!-- Product Container -->
+    <div class="image-details-container">
+        <!-- Product Image -->
+        <img src="data:image/jpeg;base64,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" alt="Product Image" class="product-image">
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <!-- Product Name -->
+            <p class="product-name">Product:-Corn</p>
+            <p class="product-price">20/- RS Per KG</p>
+            <!-- Product Description -->
+            <p class="product-description">
+<pre>Number of Items = 1
+Net Quantity = 1000 gram
+Item Weight = 1000 Grams
+This is a Vegetarian product.</pre>
+            </p>
+        </div>
+    </div>
+    <script>
+        // JavaScript code for adding products to the cart
+        function addToCart(productName, price) {
+            // Create a cart item object
+            const item = {
+                name: productName,
+                price: price,
+            };
+    
+            // Check if the cart exists in local storage, and create it if it doesn't
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            // Add the item to the cart
+            cart.push(item);
+    
+            // Store the updated cart back in local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    </script>
+    </head>
+    <body>
+    <ul>
+        <li>
+            <span>Product Price 25/-RS</span>
+            <a href="http://127.0.0.1:5500/Cart.html"><button onclick="addToCart('Product 2', 20)">Add to Cart</button></a>
+        </li>
+       
+        <!-- Add more products here -->
+    </ul>
+    
+    <a href="http://127.0.0.1:5500/Cart.html">View Cart</a>
+    </body>
+    </html>
+</body>
+</html>
